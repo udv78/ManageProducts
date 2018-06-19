@@ -100,7 +100,9 @@
 								<cells>
 									<ObjectIdentifier
 										title="{ProductID}"
-										text="{Name}" />
+										text="{Name}" 
+										titleActive = "true"
+										titlePress = "onShowDetailPopover"/>
 									<Text text="{SupplierName}" />
 									<Link
 										text="{ToSupplier/WebAddress}"
@@ -124,7 +126,6 @@
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
 
-
-	</semantic:FullscreenPage>
+</semantic:FullscreenPage>
 
 </mvc:View>

@@ -20,6 +20,8 @@
 				id="objectHeader"
 				title="{ProductID}"
 				responsive="true"
+				titleActive="true"
+				titlePress="onShowDetailPopover"
 				number="{
 							path: 'Price',
 							formatter: '.formatter.numberUnit'
