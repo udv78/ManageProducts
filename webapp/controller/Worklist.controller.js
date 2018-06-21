@@ -167,6 +167,14 @@ sap.ui.define([
 				this._oTable.getBinding("items").refresh();
 			},
 			
+			/**
+			 * Event handler when the add button gets pressed
+			 * @public
+			 */
+			onAdd: function() {
+				this.getRouter().navTo("add");
+			},			
+			
 						/**
 			 * Event handler for press event on object identifier. 
 			 * opens detail popover to show product dimensions.
