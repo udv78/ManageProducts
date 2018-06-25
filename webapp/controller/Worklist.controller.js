@@ -3,8 +3,9 @@ sap.ui.define([
 		"sap/ui/model/json/JSONModel",
 		"opensap/manageproducts/model/formatter",
 		"sap/ui/model/Filter",
-		"sap/ui/model/FilterOperator"
-	], function (BaseController, JSONModel, formatter, Filter, FilterOperator) {
+		"sap/ui/model/FilterOperator",
+		"sap/m/MessageToast"
+	], function (BaseController, JSONModel, formatter, Filter, FilterOperator, MessageToast) {
 		"use strict";
 
 		return BaseController.extend("opensap.manageproducts.controller.Worklist", {
@@ -126,6 +127,20 @@ sap.ui.define([
 			onPress : function (oEvent) {
 				// The source is the list item that got pressed
 				this._showObject(oEvent.getSource());
+			},
+
+			onDelete : function (oEvent) {
+
+				var oSource =oEvent.getSource() 
+				var path=oSource.getBindingContext().getPath()
+				var objToDelete = oSource.getBindingContext().getProperty("Name");
+				this._oTable.getModel().remove(path);
+				MessageToast.show("Deleted "+ objToDelete, {
+								closeOnBrowserNavigation : false
+							});
+				
+				//this.getModel().deleteCreatedEntry(this._oContext);
+				//this._showObject(oEvent.getSource());
 			},
 
 
