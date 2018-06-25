@@ -128,7 +128,7 @@ sap.ui.define([
 				// The source is the list item that got pressed
 				this._showObject(oEvent.getSource());
 			},
-
+ 
 			onDelete : function (oEvent) {
 
 				var oSource =oEvent.getSource() 
