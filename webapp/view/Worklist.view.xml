@@ -115,6 +115,8 @@
 											formatter: '.formatter.numberUnit'
 										}"
 										unit="{CurrencyCode}"/>
+									<Button id="delete" text="delete">
+									</Button>
 								</cells>
 							</ColumnListItem>
 						</items>
